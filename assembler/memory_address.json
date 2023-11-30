@@ -1,0 +1,13 @@
+{
+  "PMStart": "0x0000",
+  "PMEnd": "0x07FF",
+  "DMStart": "0x0800",
+  "DMEnd": "0x0FFF",
+  "StackStart": "0x1000",
+  "StackEnd": "0x13FF",
+  "VRStart": "0x1400",
+  "VREnd": "0x26BF",
+  "SpriteStart": "0x26C0",
+  "SpriteEnd": "0x26C7",
+  "KBDAddress": "0x26C8"
+}

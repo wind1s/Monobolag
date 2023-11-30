@@ -1,0 +1,388 @@
+{
+  "op_field_sizes": {
+    "op": 5,
+    "mod": 3,
+    "register": 4,
+    "address": 16,
+    "constant": 20
+  },
+  "mod_codes": {
+    "omedelbar": 0,
+    "direkt_register": 1,
+    "direkt_från": 2,
+    "indirekt_från": 3,
+    "indexerad_från": 4,
+    "direkt_till": 5,
+    "indirekt_till": 6,
+    "indexerad_till": 7
+  },
+  "instructions_table": {
+    "nop": {
+      "op_code": 0,
+      "arguments": 0,
+      "mod_support": []
+    },
+    "jmp": {
+      "op_code": 1,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "call": {
+      "op_code": 2,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "ret": {
+      "op_code": 3,
+      "arguments": 0,
+      "mod_support": []
+    },
+    "push": {
+      "op_code": 4,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "pop": {
+      "op_code": 5,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "mov": {
+      "op_code": 6,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "jeq": {
+      "op_code": 7,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jne": {
+      "op_code": 8,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jgt": {
+      "op_code": 9,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jge": {
+      "op_code": 10,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jlt": {
+      "op_code": 11,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jle": {
+      "op_code": 12,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "jcs": {
+      "op_code": 13,
+      "arguments": 1,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från"
+      ]
+    },
+    "cmp": {
+      "op_code": 14,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "add": {
+      "op_code": 15,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "sub": {
+      "op_code": 16,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "mul": {
+      "op_code": 17,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "inc": {
+      "op_code": 18,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "dec": {
+      "op_code": 19,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "and": {
+      "op_code": 20,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "or": {
+      "op_code": 21,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "xor": {
+      "op_code": 22,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "lsr": {
+      "op_code": 23,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "lsl": {
+      "op_code": 24,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "clr": {
+      "op_code": 25,
+      "arguments": 1,
+      "mod_support": [
+        "direkt_register",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "movz": {
+      "op_code": 26,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "addz": {
+      "op_code": 27,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "mulz": {
+      "op_code": 28,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "andz": {
+      "op_code": 29,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "orz": {
+      "op_code": 30,
+      "arguments": 2,
+      "mod_support": [
+        "omedelbar",
+        "direkt_register",
+        "direkt_från",
+        "indirekt_från",
+        "indexerad_från",
+        "direkt_till",
+        "indirekt_till",
+        "indexerad_till"
+      ]
+    },
+    "halt": {
+      "op_code": 31,
+      "arguments": 0,
+      "mod_support": []
+    }
+  }
+}
